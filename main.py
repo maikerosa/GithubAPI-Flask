@@ -39,7 +39,7 @@ def github_authorize():
     github = oauth.create_client('github')
     token = github.authorize_access_token()
     resp = github.get('user').json()
-    return render_template("index.html", user=resp)
+    return render_template("snippets.html", user=resp)
 
 @app.route('/profile')
 def profile():
